@@ -111,9 +111,9 @@ public class Quicksort {
         int i = esq, j = dir;
         Random rand = new Random();
         rand.setSeed(System.currentTimeMillis());
-        //System.out.print("esq + dir:" + esq + " " + dir);
-        int n_rand = (Math.abs(rand.nextInt()) % (dir-esq)) + esq;
-        //System.out.println(" - rand:" + n_rand);
+        // System.out.print("esq + dir:" + esq + " " + dir);
+        int n_rand = (Math.abs(rand.nextInt()) % (dir - esq)) + esq;
+        // System.out.println(" - rand:" + n_rand);
         int pivo = array[n_rand];
         while (i <= j) {
             while (array[i] < pivo)
@@ -227,7 +227,7 @@ public class Quicksort {
 
         System.out.println("");
         System.out.println("-------------------------");
-        //array1.mostrar();
+        // array1.mostrar();
         System.out.println("");
         System.out.println("");
 
@@ -265,7 +265,7 @@ public class Quicksort {
 
         System.out.println("");
         System.out.println("-------------------------");
-        //array1.mostrar();
+        // array1.mostrar();
         System.out.println("");
         System.out.println("");
 
@@ -303,7 +303,7 @@ public class Quicksort {
 
         System.out.println("");
         System.out.println("-------------------------");
-        //array1.mostrar();
+        // array1.mostrar();
         System.out.println("");
         System.out.println("");
 
@@ -331,6 +331,44 @@ public class Quicksort {
 
         /* */
 
+        /* Teste com array de 17500 elementos */
+
+        array1 = new Quicksort(17500);
+        array1.aleatorio();
+        array2 = new Quicksort(array1);
+        array3 = new Quicksort(array1);
+        array4 = new Quicksort(array1);
+
+        System.out.println("");
+        System.out.println("-------------------------");
+        // array1.mostrar();
+        System.out.println("");
+        System.out.println("");
+
+        inicio1 = array1.now();
+        array1.QuicksortFirstPivot(0, (array1.n - 1));
+        fim1 = array1.now();
+        inicio2 = array1.now();
+        array2.QuicksortLastPivot(0, (array2.n - 1));
+        fim2 = array1.now();
+        inicio3 = array1.now();
+        array3.QuicksortRandomPivot(0, (array3.n - 1));
+        fim3 = array1.now();
+        inicio4 = array1.now();
+        array4.QuicksortMedianOfThreePivot(0, (array4.n - 1));
+        fim4 = array1.now();
+
+        System.out.println("Array organizado: Aleatório _ 17500 elementos");
+        System.out.println("Tempos para ordenar: ");
+        System.out.printf("FirstPivot: %.4fs.\n", (fim1 - inicio1) / 1000);
+        System.out.printf("LastPivot: %.4fs.\n", (fim2 - inicio2) / 1000);
+        System.out.printf("RandomPivot: %.4fs.\n", (fim3 - inicio3) / 1000);
+        System.out.printf("MedianOfThreePivot: %.4fs.\n", (fim4 - inicio4) / 1000);
+        System.out.println("");
+        System.out.println("-------------------------");
+
+        /* */
+
         /* Array Aleatório - FIM */
 
         /* Array Organizado - INÍCIO */
@@ -344,7 +382,7 @@ public class Quicksort {
 
         System.out.println("");
         System.out.println("-------------------------");
-        //array1.mostrar();
+        // array1.mostrar();
         System.out.println("");
         System.out.println("");
 
@@ -382,7 +420,7 @@ public class Quicksort {
 
         System.out.println("");
         System.out.println("-------------------------");
-        //array1.mostrar();
+        // array1.mostrar();
         System.out.println("");
         System.out.println("");
 
@@ -420,7 +458,7 @@ public class Quicksort {
 
         System.out.println("");
         System.out.println("-------------------------");
-        //array1.mostrar();
+        // array1.mostrar();
         System.out.println("");
         System.out.println("");
 
@@ -447,6 +485,45 @@ public class Quicksort {
         System.out.println("-------------------------");
 
         /* */
+
+        /* Teste com array de 17500 elementos */
+
+        array1 = new Quicksort(17500);
+        array1.crescente();
+        array2 = new Quicksort(array1);
+        array3 = new Quicksort(array1);
+        array4 = new Quicksort(array1);
+
+        System.out.println("");
+        System.out.println("-------------------------");
+        // array1.mostrar();
+        System.out.println("");
+        System.out.println("");
+
+        inicio1 = array1.now();
+        array1.QuicksortFirstPivot(0, (array1.n - 1));
+        fim1 = array1.now();
+        inicio2 = array1.now();
+        array2.QuicksortLastPivot(0, (array2.n - 1));
+        fim2 = array1.now();
+        inicio3 = array1.now();
+        array3.QuicksortRandomPivot(0, (array3.n - 1));
+        fim3 = array1.now();
+        inicio4 = array1.now();
+        array4.QuicksortMedianOfThreePivot(0, (array4.n - 1));
+        fim4 = array1.now();
+
+        System.out.println("Array organizado: Organizado _ 17500 elementos");
+        System.out.println("Tempos para ordenar: ");
+        System.out.printf("FirstPivot: %.4fs.\n", (fim1 - inicio1) / 1000);
+        System.out.printf("LastPivot: %.4fs.\n", (fim2 - inicio2) / 1000);
+        System.out.printf("RandomPivot: %.4fs.\n", (fim3 - inicio3) / 1000);
+        System.out.printf("MedianOfThreePivot: %.4fs.\n", (fim4 - inicio4) / 1000);
+        System.out.println("");
+        System.out.println("-------------------------");
+
+        /* */
+
         /* Array Organizado - FIM */
 
         /* Array Semi-organizado - INÍCIO */
@@ -460,7 +537,7 @@ public class Quicksort {
 
         System.out.println("");
         System.out.println("-------------------------");
-        //array1.mostrar();
+        // array1.mostrar();
         System.out.println("");
         System.out.println("");
 
@@ -498,7 +575,7 @@ public class Quicksort {
 
         System.out.println("");
         System.out.println("-------------------------");
-        //array1.mostrar();
+        // array1.mostrar();
         System.out.println("");
         System.out.println("");
 
@@ -536,7 +613,7 @@ public class Quicksort {
 
         System.out.println("");
         System.out.println("-------------------------");
-        //array1.mostrar();
+        // array1.mostrar();
         System.out.println("");
         System.out.println("");
 
@@ -563,6 +640,45 @@ public class Quicksort {
         System.out.println("-------------------------");
 
         /* */
+
+        /* Teste com array de 17500 elementos */
+
+        array1 = new Quicksort(17500);
+        array1.semialeatorio();
+        array2 = new Quicksort(array1);
+        array3 = new Quicksort(array1);
+        array4 = new Quicksort(array1);
+
+        System.out.println("");
+        System.out.println("-------------------------");
+        // array1.mostrar();
+        System.out.println("");
+        System.out.println("");
+
+        inicio1 = array1.now();
+        array1.QuicksortFirstPivot(0, (array1.n - 1));
+        fim1 = array1.now();
+        inicio2 = array1.now();
+        array2.QuicksortLastPivot(0, (array2.n - 1));
+        fim2 = array1.now();
+        inicio3 = array1.now();
+        array3.QuicksortRandomPivot(0, (array3.n - 1));
+        fim3 = array1.now();
+        inicio4 = array1.now();
+        array4.QuicksortMedianOfThreePivot(0, (array4.n - 1));
+        fim4 = array1.now();
+
+        System.out.println("Array organizado: Semi-organizado _ 17500 elementos");
+        System.out.println("Tempos para ordenar: ");
+        System.out.printf("FirstPivot: %.4fs.\n", (fim1 - inicio1) / 1000);
+        System.out.printf("LastPivot: %.4fs.\n", (fim2 - inicio2) / 1000);
+        System.out.printf("RandomPivot: %.4fs.\n", (fim3 - inicio3) / 1000);
+        System.out.printf("MedianOfThreePivot: %.4fs.\n", (fim4 - inicio4) / 1000);
+        System.out.println("");
+        System.out.println("-------------------------");
+
+        /* */
+
         /* Array Semi-organizado - FIM */
 
     }
